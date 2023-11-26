@@ -1,0 +1,64 @@
+{
+    "position": "top",
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray"],
+    // Modules configuration
+    "sway/workspaces": {
+         "disable-scroll": true,
+         "warp-on-scroll": false,
+         "format": "{name}",
+    },
+    "clock": {
+    	"format": "   {:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "󰃭   {:%d-%m-%Y}"
+    },
+    "cpu": {
+        "format": "    {usage}%",
+	"states": {
+	    "critical": 90
+	},
+        "tooltip": false
+    },
+    "memory": {
+        "format": "    {}%",
+	"states": {
+	    "warning": 75,
+	    "critical": 90
+	}
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}      {capacity}%",
+        "format-charging": "󰂄    {capacity}%",
+        "format-plugged": "    {capacity}%",
+        "format-alt": "{icon}      {time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "    {essid} ({signalStrength}%)",
+        "format-ethernet": "󰈀    {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "󰖪    Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-muted": "󰖁   Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+}
