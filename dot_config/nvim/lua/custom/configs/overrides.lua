@@ -35,6 +35,7 @@ M.mason = {
     "deno",
     "prettier",
     "eslint-lsp",
+    "tailwindcss-language-server",
 
     -- python
     "flake8",

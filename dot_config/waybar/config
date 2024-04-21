@@ -1,10 +1,10 @@
 {
     "position": "top",
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-left": ["hyprland/workspaces", "custom/media"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray"],
     // Modules configuration
-    "sway/workspaces": {
+    "hyprland/workspaces": {
          "disable-scroll": true,
          "warp-on-scroll": false,
          "format": "{name}",

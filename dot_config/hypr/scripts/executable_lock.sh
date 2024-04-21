@@ -1,4 +1,4 @@
-swaylock --screenshots --clock --indicator-idle-visible \
+swaylock -f --screenshots --clock --indicator-idle-visible \
 	--indicator-radius 100 \
 	--indicator-thickness 7 \
 	--ring-color 455a64 \

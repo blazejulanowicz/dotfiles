@@ -1,0 +1,11 @@
+{{ if eq .chezmoi.hostname "thinkpad-arch" }}
+preload = ~/images/wallpaper.jpg
+wallpaper = ,~/images/wallpaper.jpg
+{{ else }}
+preload = ~/Pictures/house.jpg
+wallpaper = ,~/Pictures/house.jpg
+{{ end }}
+
+ipc = off
+
+splash = false
