@@ -1,13 +1,13 @@
 * {
-    border: none;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    min-height: 0;
-    color: white;
+  border: none;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  min-height: 0;
+  color: white;
 }
 
 window#waybar {
-    background: transparent;
+  background: transparent;
 }
 
 tooltip {
@@ -19,6 +19,7 @@ tooltip label {
   color: white;
 }
 
+#idle_inhibitor,
 #tray,
 #battery,
 #memory,
@@ -27,11 +28,12 @@ tooltip label {
 #pulseaudio,
 #clock,
 #workspaces {
-    margin: 2px 2px;
-    background: #2B2E4A;
-    border-radius: 3px;
+  margin: 2px 2px;
+  background: #2b2e4a;
+  border-radius: 3px;
 }
 
+#idle_inhibitor,
 #tray,
 #workspaces button,
 #battery,
@@ -40,7 +42,7 @@ tooltip label {
 #network,
 #pulseaudio,
 #clock {
-    padding: 5px 10px;
+  padding: 5px 10px;
 }
 
 #battery.critical:not(.charging),
@@ -48,24 +50,28 @@ tooltip label {
 #cpu.critical,
 #network.disconnected,
 #pulseaudio.muted {
-    background-color: #C70039;
+  background-color: #c70039;
 }
 
 #workspaces button {
-    border-radius: 0;
-    border-bottom: 2px solid transparent;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
 }
 
 #workspaces button.active {
-    font-weight: bold;
-    border-bottom: 2px solid white;
+  font-weight: bold;
+  border-bottom: 2px solid white;
 }
 
 #battery.charging {
-    background-color: #26A65B;
+  background-color: #26a65b;
 }
 
 #battery.warning:not(.charging) {
-    background-color: #FFCC00;
-    color: black;
+  background-color: #ffcc00;
+  color: black;
+}
+
+#idle_inhibitor.activated {
+  background-color: #26a65b;
 }

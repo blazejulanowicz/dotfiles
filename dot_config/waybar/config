@@ -2,7 +2,7 @@
     "position": "top",
     "modules-left": ["hyprland/workspaces", "custom/media"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "battery", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
          "disable-scroll": true,
@@ -61,4 +61,12 @@
         },
         "on-click": "pavucontrol"
     },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        },
+        "timeout": 30
+    }
 }
