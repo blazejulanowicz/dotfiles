@@ -1,0 +1,39 @@
+[user]
+	email = {{ .email }}
+	name = Blazej Ulanowicz
+[core]
+	editor = nvim
+  pager = delta
+	excludesfile = ~/.gitignore
+[interactive]
+  diffFilter = delta --color-only
+[merge]
+  conflictstyle = diff3
+[delta]
+  navigate = true
+  line-numbers = false
+  side-by-side = false
+[diff]
+  colorMoved = default
+[alias]
+  aa = add --all
+  st = status
+  sw = switch
+  swc = switch -c
+  sr = "!f() { git for-each-ref --count=10 --sort=-committerdate --format='%(refname:short)|%(committerdate:relative)|%(subject)|%(authorname)' refs/heads | column -ts'|' | fzf +m | cut -d ' ' -f 1 | xargs -o git switch; }; f"
+  ll = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  pf = push --force-with-lease
+  ri = rebase -i
+  cm = commit -v
+  cma = commit --amend
+  df = diff
+  dfc = diff --cached
+  r = restore
+  rs = restore --staged
+  f = fetch
+  pu = push -u origin HEAD
+[rebase]
+  autosquash = true
+  autostash = true
+[init]
+	templatedir = ~/.git_template
